@@ -87,12 +87,6 @@ export function buildEntryMenu(ctx: EntryMenuContext, payload?: ItemKeys): MenuI
             note: `(${item.getCatalogue()?.getName()})`,
             run: () => store.goto(item),
           },
-          profileType && {
-            label: `Goto ${(item as EditorBase & Profile).typeName}`,
-            shortcut: "Alt+Click",
-            note: `[${profileType.getCatalogue().getName()}]`,
-            run: () => store.goto(profileType as EditorBase & ProfileType),
-          },
           child && store.can_goto(child) && {
             label: `Goto ${child.getName()}`,
             shortcut: "Alt+Click",
@@ -315,6 +309,16 @@ export function buildEntryMenu(ctx: EntryMenuContext, payload?: ItemKeys): MenuI
           },
         ],
   );
+
+  // Last on purpose: it is rarely wanted, and at the top it pushed References down for
+  // profiles only, so muscle memory landed on it instead.
+  group("navigate.type", [
+    !payload && profileType && {
+      label: `Goto ${(item as EditorBase & Profile).typeName}`,
+      note: `[${profileType.getCatalogue().getName()}]`,
+      run: () => store.goto(profileType as EditorBase & ProfileType),
+    },
+  ]);
 
   // Scripts choose a group by name; the ones that don't get their own submenu, which is
   // where every script action used to go whether it belonged there or not.
