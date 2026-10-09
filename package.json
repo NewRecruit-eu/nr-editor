@@ -57,7 +57,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "giloushaker",
+        "owner": "NewRecruit-eu",
         "repo": "nr-editor",
         "releaseType": "release"
       }

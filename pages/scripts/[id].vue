@@ -142,9 +142,9 @@ list exactly like those do. Editing the script re-runs them over what is loaded.
 <span class="bold">Notes:</span>
 Everything a script does in one call is a single undo entry.
 Interact with the editor through `$store` (also available in the console). Available actions are in
-<a target="_blank" href="https://github.com/giloushaker/nr-editor/blob/master/stores/editorStore.ts">stores/editorStore.ts</a>; the hook and argument types are in
-<a target="_blank" href="https://github.com/giloushaker/nr-editor/blob/master/stores/scriptsStore.ts">stores/scriptsStore.ts</a>.
-Example scripts (typescript here, but folder scripts must be .js): <a target="_blank" href="https://github.com/giloushaker/nr-editor/tree/master/default-scripts">default-scripts/</a>
+<a target="_blank" href="https://github.com/NewRecruit-eu/nr-editor/blob/master/stores/editorStore.ts">stores/editorStore.ts</a>; the hook and argument types are in
+<a target="_blank" href="https://github.com/NewRecruit-eu/nr-editor/blob/master/stores/scriptsStore.ts">stores/scriptsStore.ts</a>.
+Example scripts (typescript here, but folder scripts must be .js): <a target="_blank" href="https://github.com/NewRecruit-eu/nr-editor/tree/master/default-scripts">default-scripts/</a>
 Imports have to be bundled into the one .js file (rollup/webpack) -- scripts are loaded standalone.
 To read/write local files, use the functions on the global `$node`.
         </pre>

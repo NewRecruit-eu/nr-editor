@@ -18,7 +18,7 @@ Community-driven development: We welcome and value the feedback and suggestions 
 
 To install NewRecruit Data Editor, follow these steps:
 
-Download the latest release from the [Releases](https://github.com/giloushaker/nr-editor/releases)
+Download the latest release from the [Releases](https://github.com/NewRecruit-eu/nr-editor/releases)
 page.
 
 Choose the appropriate installer for your operating system (Windows, macOS, Linux).

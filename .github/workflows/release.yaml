@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          repository: giloushaker/nr-editor
+          repository: NewRecruit-eu/nr-editor
           submodules: true
           token: ${{ secrets.GH_TOKEN }}
           fetch-depth: 1
@@ -70,7 +70,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          repository: giloushaker/nr-editor
+          repository: NewRecruit-eu/nr-editor
           submodules: true
           token: ${{ secrets.GH_TOKEN }}
           ref: master
@@ -105,7 +105,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          repository: giloushaker/nr-editor
+          repository: NewRecruit-eu/nr-editor
           submodules: true
           token: ${{ secrets.GH_TOKEN }}
           ref: master
