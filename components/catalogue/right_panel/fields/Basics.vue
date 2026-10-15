@@ -34,6 +34,14 @@
           placeholder="Forces"
         />
 
+        <EditorField
+          v-if="displayGroupable"
+          :item="item"
+          field="displayGroup"
+          label="Display Group"
+          title="NR only: sub-header this option lists under in its group. Consecutive options with the same value form one block; headers show only when the group mixes several values."
+        />
+
         <template v-if="aliases">
           <EditorField
             :item="item"
@@ -123,6 +131,15 @@ export default {
         "selectionEntryGroupLink",
         "association",
         "associationLink",
+      ].includes(this.typeName);
+    },
+    displayGroupable() {
+      return [
+        "selectionEntry",
+        "selectionEntryGroup",
+        "selectionEntryLink",
+        "selectionEntryGroupLink",
+        "entryLink",
       ].includes(this.typeName);
     },
   },
