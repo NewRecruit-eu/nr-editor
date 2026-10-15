@@ -1,1 +1,0 @@
-import{vn as e}from"./BdCt0DAE.js";var t=e(`/assets/icons/warning_sign.png`);export{t};
